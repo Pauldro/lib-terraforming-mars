@@ -9,11 +9,16 @@ class ComposerStaticInitae7fb5064d3aa9e12e7f4cc56a1889a2
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'TerraformingMars\\ProcessWire\\' => 29,
             'TerraformingMars\\' => 17,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'TerraformingMars\\ProcessWire\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/ProcessWire',
+        ),
         'TerraformingMars\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -21,11 +26,11 @@ class ComposerStaticInitae7fb5064d3aa9e12e7f4cc56a1889a2
     );
 
     public static $classMap = array (
-        'TerraformingMars\\BoardStructures' => __DIR__ . '/../..' . '/src/BoardStructures.class.php',
         'TerraformingMars\\CounterInterface' => __DIR__ . '/../..' . '/src/Counter.interface.php',
         'TerraformingMars\\CounterTraits' => __DIR__ . '/../..' . '/src/Counter.trait.php',
-        'TerraformingMars\\GameSession' => __DIR__ . '/../..' . '/src/GameSession.class.php',
-        'TerraformingMars\\GameTracks' => __DIR__ . '/../..' . '/src/GameTracks.class.php',
+        'TerraformingMars\\Game' => __DIR__ . '/../..' . '/src/ProcessWire/Game.class.php',
+        'TerraformingMars\\ProcessWire\\Structures' => __DIR__ . '/../..' . '/src/ProcessWire/Structures.class.php',
+        'TerraformingMars\\ProcessWire\\Tracks' => __DIR__ . '/../..' . '/src/ProcessWire/Tracks.class.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

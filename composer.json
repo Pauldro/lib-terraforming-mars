@@ -17,7 +17,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-            "TerraformingMars\\": "src/"
+            "TerraformingMars\\": "src/",
+            "TerraformingMars\\ProcessWire\\": "src/ProcessWire"
 		}
 	}
 }

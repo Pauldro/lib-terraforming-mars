@@ -6,9 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'TerraformingMars\\BoardStructures' => $baseDir . '/src/BoardStructures.class.php',
     'TerraformingMars\\CounterInterface' => $baseDir . '/src/Counter.interface.php',
     'TerraformingMars\\CounterTraits' => $baseDir . '/src/Counter.trait.php',
-    'TerraformingMars\\GameSession' => $baseDir . '/src/GameSession.class.php',
-    'TerraformingMars\\GameTracks' => $baseDir . '/src/GameTracks.class.php',
+    'TerraformingMars\\Game' => $baseDir . '/src/ProcessWire/Game.class.php',
+    'TerraformingMars\\ProcessWire\\Structures' => $baseDir . '/src/ProcessWire/Structures.class.php',
+    'TerraformingMars\\ProcessWire\\Tracks' => $baseDir . '/src/ProcessWire/Tracks.class.php',
 );

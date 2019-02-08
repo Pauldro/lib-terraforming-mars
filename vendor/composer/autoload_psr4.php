@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'TerraformingMars\\ProcessWire\\' => array($baseDir . '/src/ProcessWire'),
     'TerraformingMars\\' => array($baseDir . '/src'),
 );

@@ -4,7 +4,9 @@
     use Pauldro\Util\MagicMethods;
     use Pauldro\Util\CounterTraits;
 
-    class GameSession implements CounterInterface {
+    use TerraformingMars\CounterInterface;
+
+    class Game implements CounterInterface {
         use MagicMethods;
         use CounterTraits;
 
@@ -12,10 +14,7 @@
         protected $players;
         protected $currentplayer;
         protected $firstplayer;
-
-
         protected $structures;
-
         protected $tracks;
 
 

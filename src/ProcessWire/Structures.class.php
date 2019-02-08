@@ -1,10 +1,12 @@
 <?php
-    namespace TerraformingMars;
+    namespace TerraformingMars\ProcessWire;
     
     use Pauldro\Util\MagicMethods;
     use Pauldro\Util\CounterTraits;
-    
-    class BoardStructures {
+
+    use TerraformingMars\CounterInterface;
+
+    class Structures implements CounterInterface {
         protected $oceans;
         protected $forests;
         protected $cities;
