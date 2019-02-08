@@ -2,9 +2,6 @@
     namespace TerraformingMars;
     
     use Pauldro\Util\MagicMethods;
-    use Pauldro\Util\CounterTraits;
-
-    use TerraformingMars\CounterInterface;
 
     class Game implements CounterInterface {
         use MagicMethods;
@@ -16,19 +13,7 @@
         protected $firstplayer;
         protected $structures;
         protected $tracks;
-
-
-        public function get_player($id) {
-
-        }
-
-        public function add_player($id) {
-
-        }
-
-        public function remove_player($id) {
-
-        }
+        private $pw_game;
 
         public function __call($method, $args) {
             if ($this->_isincrementing($method)) {
@@ -36,22 +21,27 @@
 
                 if ($this->tracks->has_property($property)) {
                     $this->tracks->call_increasedecrease($method, $args);
-                }/* elseif($this->structures->has_property($property)) {
-
+                } elseif($this->structures->has_property($property)) {
                     $this->structures->call_increasedecrease($method, $args);
-                } */ else {
-                    echo 'error';
-                    // TODO THROW ERROR
+                } else {
+                   $this->error("Property $property cannot be incremented or depleted");
                 }
             }
         }
 
-        public function __construct() {
-            $this->tracks = new GameTracks();
-           // $this->structures new GameStructures();
-
-           // $this->tracks->increase_generation(1);
-           // $this->increase_oceans(9);
-            $this->tracks->decrease_temperature(30);
+        public static function load($id) {
+            $gamepage = \Processwire\wire('pages')->get("template=tfm-game, gameid=$id");
+            $game = new Game();
+            $game->load_processwire($gamepage);
+            return $game;
+        }
+        
+        public function load_processwire($gamepage) {
+            $this->id = $gamepage->id;
+            $this->pw_game = $gamepage;
+            
+            foreach ($gamepage->players as $player) {
+                $this->players[] = Player::build_fromprocesswire($player);
+            }
         }
     }

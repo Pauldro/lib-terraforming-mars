@@ -9,6 +9,7 @@ return array(
     'TerraformingMars\\CounterInterface' => $baseDir . '/src/Counter.interface.php',
     'TerraformingMars\\CounterTraits' => $baseDir . '/src/Counter.trait.php',
     'TerraformingMars\\Game' => $baseDir . '/src/ProcessWire/Game.class.php',
+    'TerraformingMars\\ProcessWire\\Player' => $baseDir . '/src/ProcessWire/Player.class.php',
     'TerraformingMars\\ProcessWire\\Structures' => $baseDir . '/src/ProcessWire/Structures.class.php',
     'TerraformingMars\\ProcessWire\\Tracks' => $baseDir . '/src/ProcessWire/Tracks.class.php',
 );

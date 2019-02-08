@@ -29,6 +29,7 @@ class ComposerStaticInitae7fb5064d3aa9e12e7f4cc56a1889a2
         'TerraformingMars\\CounterInterface' => __DIR__ . '/../..' . '/src/Counter.interface.php',
         'TerraformingMars\\CounterTraits' => __DIR__ . '/../..' . '/src/Counter.trait.php',
         'TerraformingMars\\Game' => __DIR__ . '/../..' . '/src/ProcessWire/Game.class.php',
+        'TerraformingMars\\ProcessWire\\Player' => __DIR__ . '/../..' . '/src/ProcessWire/Player.class.php',
         'TerraformingMars\\ProcessWire\\Structures' => __DIR__ . '/../..' . '/src/ProcessWire/Structures.class.php',
         'TerraformingMars\\ProcessWire\\Tracks' => __DIR__ . '/../..' . '/src/ProcessWire/Tracks.class.php',
     );
