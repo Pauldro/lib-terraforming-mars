@@ -1,0 +1,23 @@
+{
+	"name": "pauldro/terraforming-mars-lib",
+    "type": "library",
+    "description": "",
+    "keywords": ["terraforming-mars"],
+	"homepage": "https://github.com/cptechinc/terraforming-mars-lib",
+	"authors": [
+        {
+            "name": "Paul Gomez",
+            "email": "paul@cptechinc.com",
+            "homepage": "https://www.cptechinc.com",
+            "role": "Developer"
+        }
+    ],
+	"require": {
+		"pauldro/base-utilities": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+            "TerraformingMars\\": "src/"
+		}
+	}
+}
