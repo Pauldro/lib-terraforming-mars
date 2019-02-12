@@ -1,5 +1,5 @@
 <?php
-    namespace TerraformingMars\ProcessWire;
+    namespace TerraformingMars;
     
     use TerraformingMars\CounterInterface;
     

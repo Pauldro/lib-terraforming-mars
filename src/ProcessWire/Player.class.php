@@ -1,18 +1,20 @@
 <?php
-    namespace TerraformingMars\ProcessWire;
-        
+    namespace TerraformingMars;
+    
     use Pauldro\Util\MagicMethods;
-    use Pauldro\Util\CounterTraits;
-
-    use TerraformingMars\CounterInterface;
 
     class Player {
-        protected $id;
-        protected $name;
+        use MagicMethods;
+        use CounterTraits;
 
-        static function build_fromprocesswire($page) {
-            $player = new Player();
-            $player->id = $page->name;
-            $player->name = $page->title;
-        }
+        protected $username;
+        protected $fullname;
+
+    }
+
+    class PlayerSession extends Player {
+        use MagicMethods;
+        use CounterTraits;
+
+        protected $gameid;
     }
